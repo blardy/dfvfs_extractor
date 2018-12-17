@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-# I ddi not succeed to get it working using python3...
+# I did not succeed to get it working using python3... // Switching to python2 ;(
 #   File "/home/XXXXXXXX/.local/lib/python3.6/site-packages/dfvfs/helpers/command_line.py", line 584, in _ReadSelectedVolumes
 #     volume_identifiers_string = self._input_reader.Read()
 #   File "/home/XXXXXXXX/.local/lib/python3.6/site-packages/dfvfs/helpers/command_line.py", line 76, in Read
