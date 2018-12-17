@@ -1,6 +1,28 @@
 # dfvfs_extractor
 Repository fo  Daily Blog Challenge#569 2018-12-16 | https://www.hecfblog.com/2018/12/daily-blog-569-sunday-funday-121618.html
 
+Help !!!
+--------
+
+```
+python2 sunday_funday_569.py -h
+usage: sunday_funday_569.py [-h] [-v {DEBUG,INFO,WARNING,CRITICAL,ERROR}] -i
+                            IMAGE --target TARGET [--extract EXTRACT] [--hash]
+                            [--algo ALGO] [--recurse] [--noads]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -v {DEBUG,INFO,WARNING,CRITICAL,ERROR}, --verbosity {DEBUG,INFO,WARNING,CRITICAL,ERROR}
+                        increase output verbosity
+  -i IMAGE, --image IMAGE
+                        filename of a storage media image
+  --target TARGET       file to extract / compute hash
+  --extract EXTRACT     Output folder
+  --hash                compute hash of the specified file
+  --algo ALGO           Output folder
+  --recurse             Enable recursivity if target is a folder
+  --noads               Disable ADS (Alternate Data Stream) processing
+```
 
 Example
 --------
