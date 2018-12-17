@@ -19,10 +19,7 @@ import argparse
 import hashlib
 import os
 
-from dfvfs.analyzer import analyzer
-from dfvfs.analyzer import fvde_analyzer_helper
 from dfvfs.lib import definitions
-from dfvfs.lib import errors
 from dfvfs.helpers import command_line
 from dfvfs.helpers import volume_scanner
 from dfvfs.resolver import resolver
