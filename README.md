@@ -30,7 +30,8 @@ optional arguments:
 Example
 --------
 
-List files matching a specific pattern (all files that ends with '.exe' on Users folder, recursively) and export the list to hash.csv file.
+List file(s) matching a specific pattern (e.g. all files that ends with '.exe' on Users folder recursively), and export to hash.csv file.
+
 ```
 $>python2 sunday_funday_569.py -i HRServer_Disk0.e01 --target /users  --filter '\.exe$' --hash --recurse --csv hash.csv
 [2018-12-18 12:55:43][sunday_funday_569] Extractor:
@@ -91,7 +92,7 @@ VSS identifier(s):all
 [2018-12-17 07:31:10][sunday_funday_569]    - p1_windows_system32_cmd.exe: 935c1861df1f4018d698e8b65abfa02d7e9037d8f68ca3c2065b6ca165d44ad2
 ```
 
-Compute the hash (sha256) of files inside a directory
+Compute the hash (sha256) of files inside a directory :
 ```
 $>python2 sunday_funday_569.py -i HRServer_Disk0.e01 --target /windows/system32/winevt/logs --hash 
 [2018-12-17 07:34:10][sunday_funday_569] Extractor:
@@ -132,7 +133,7 @@ VSS identifier(s):
 [...] // End snip
 ```
 
-Compute the hash (md5) and extract of files inside a directory, recursive with shadow copies.
+Compute the hash (md5) + extract copies of files inside a directory, recursively including shadow copies :
 ```
 $> python2 sunday_funday_569.py -i HRServer_Disk0.e01 --target /windows/system32/winevt/logs --hash --extract out_folder/win_logs --recurse --algo md5
 
@@ -186,7 +187,7 @@ out_folder/win_logs/p1_windows_system32_winevt_logs_Microsoft-Client-Licensing-P
 
 ```
 
-Find a file that is matching a specific regex over the entire image:
+Find file(s) that match a specific regex over the entire image :
 ```
 $> python2 sunday_funday_569.py -i HRServer_Disk0.e01 --target /  --filter '^cmd\.exe$' --hash --recurse 
 [2018-12-18 12:57:12][sunday_funday_569] Extractor:
