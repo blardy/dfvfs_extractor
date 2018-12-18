@@ -65,6 +65,16 @@ VSS identifier(s):
 [2018-12-18 12:55:58][sunday_funday_569]    - p1_users_mpowers_Desktop_sub-win-x64_104.148.109.124_5682_3262.exe: d1cf948eb090ea053ff7182bb4416fc1d900ff3a8fbdb3a0920b84fe2e7bb745
 [2018-12-18 12:55:58][sunday_funday_569]    - p1_users_mpowers_Downloads_python-3.7.0-amd64-webinstall.exe: 312feca8c809d0a8ba177e85e68777fa97cd0045cd2c313446bf7c4b70940f23
 [2018-12-18 12:55:58][sunday_funday_569]    - p1_users_mpowers_Downloads_python-3.7.0-amd64-webinstall.exe_Zone.Identifier: eacd09517ce90d34ba562171d15ac40d302f0e691b439f91be1b6406e25f5913
+
+$>cat hash.csv
+Filename|Hash(sha256)
+p1_users_Administrator_AppData_Local_Google_Chrome_User Data_SwReporter_32.166.201_software_reporter_tool.exe|e82ef5189e5be91eb04a3b100cd49b36f770b51fa94547678339151d65d3f38c
+p1_users_Administrator_AppData_Local_Temp_CR_D9B8C.tmp_setup.exe|324c211392c9508d9d8e5ffd1665ef6cb572c014c537b078c3bef2f5894ac266
+p1_users_Administrator_Downloads_7z1805-x64.exe|c1e42d8b76a86ea1890ad080e69a04c75a5f2c0484bdcd838dc8fa908dd4a84c
+p1_users_Administrator_Downloads_7z1805-x64.exe_Zone.Identifier|eacd09517ce90d34ba562171d15ac40d302f0e691b439f91be1b6406e25f5913
+p1_users_Administrator_Downloads_npp.7.5.7.Installer.x64.exe|0cdeea549c6f7f2bd4104882c33aca88fd88c1a2751595f300d0f9aace85d5d8
+p1_users_Administrator_Downloads_npp.7.5.7.Installer.x64.exe_Zone.Identifier|eacd09517ce90d34ba562171d15ac40d302f0e691b439f91be1b6406e25f5913
+[...]
 ```
 
 Extract files and hash (sha256) of `/windows/system32/cmd.exe` from the given image :
