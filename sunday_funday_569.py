@@ -152,7 +152,7 @@ class Extractor(object):
                 sub_prefix = '{}{}'.format(sub_prefix, sub_file_entry.name)
 
             # Process the sub entries
-            for x in self.process(sub_file_entry, prefix=sub_prefix , recurse=recurse, ads=ads):
+            for x in self.process(sub_file_entry, prefix=sub_prefix , recurse=recurse, ads=ads, filter=filter):
                 yield x
 
 
@@ -180,7 +180,7 @@ def sunday_funday_569():
     logging.basicConfig(format=LOG_FORMAT, level=LOG_VERBOSITY.get(args.verbosity, 'INFO'), datefmt='%Y-%m-%d %I:%M:%S')
 
     if not args.extract and not args.hash and not args.list:
-        logging.error('Please specify at least an action --hash or --extract <folder>')
+        logging.error('Please specify at least an action --list, --hash or --extract <folder>')
         return
 
     try:
