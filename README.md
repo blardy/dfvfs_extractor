@@ -31,6 +31,7 @@ Example
 --------
 
 List file(s) matching a specific pattern (e.g. all files that ends with '.exe' on Users folder recursively), and export to hash.csv file.
+
 ```
 $>python2 sunday_funday_569.py -i HRServer_Disk0.e01 --target /users  --filter '\.exe$' --hash --recurse --csv hash.csv
 [2018-12-18 12:55:43][sunday_funday_569] Extractor:
@@ -66,7 +67,7 @@ VSS identifier(s):
 [2018-12-18 12:55:58][sunday_funday_569]    - p1_users_mpowers_Downloads_python-3.7.0-amd64-webinstall.exe_Zone.Identifier: eacd09517ce90d34ba562171d15ac40d302f0e691b439f91be1b6406e25f5913
 ```
 
-Extract file + sha256 hash of `/windows/system32/cmd.exe` from image :
+Extract files and hash (sha256) of `/windows/system32/cmd.exe` from the given image :
 ```
  $>python2 sunday_funday_569.py -i HRServer_Disk0.e01 --target /windows/system32/cmd.exe --hash --extract ./output_folder
 
