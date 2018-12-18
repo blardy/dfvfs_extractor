@@ -30,7 +30,7 @@ optional arguments:
 Example
 --------
 
-List file matching a specific pattern (all files that ends with '.exe' on Users folder), and export to hash.csv file.
+List file matching a specific pattern (all files that ends with '.exe' on Users folder recursively), and export to hash.csv file.
 ```
 $>python2 sunday_funday_569.py -i HRServer_Disk0.e01 --target /users  --filter '\.exe$' --hash --recurse --csv hash.csv
 [2018-12-18 12:55:43][sunday_funday_569] Extractor:
