@@ -1,6 +1,30 @@
 # dfvfs_extractor
 Repository for  Daily Blog Challenge#569 2018-12-16 | https://www.hecfblog.com/2018/12/daily-blog-569-sunday-funday-121618.html
 
+Info
+--------
+
+Tool that is used to search, extract or compute hash from file(s) based on a disk image. If shadow copies exist, it will prompt a message whether to process those or not.
+
+Primary usage is as follows:
+```
+# Compute hash (default is sha256) of `/windows/system32/cmd.exe` and extract file into ```output``` folder
+$> python2 sunday_funday_569.py -i image.e01 --target '/windows/system32/cmd.exe' --hash --extract 'output'
+
+# Compute hash (md5) of `/windows/system32/cmd.exe` and extract file into ```output``` folder
+$> python2 sunday_funday_569.py -i image.e01 --target '/windows/system32/cmd.exe' --hash --extract 'output' --algo md5
+
+# Compute hash (md5) of every `.exe` inside `/users/` recursively and exports result to `hashes.csv`. Files are extracted into ```output``` folder. 
+$> python2 sunday_funday_569.py -i image.e01 --target '/users' --recurse --hash --extract 'output' --algo md5 --filter '\.exe$' --csv hashes.csv 
+
+# Export evtx files that are inside `/windows/system32/winevt` from an image into `output` folder.
+$> python2 sunday_funday_569.py -i image.e01 --target '/windows/system32/winevt' --recurse --extract 'output' --filter '\.evtx$'
+
+# Search for a file matching `cmd.exe (^cmd\.exe$)` and compute hash (sha512)
+$> python2 sunday_funday_569.py -i image.e01 --target '/' --recurse --filter '^cmd\.exe$' --hash --algo sha512
+
+```
+
 Help !!!
 --------
 
