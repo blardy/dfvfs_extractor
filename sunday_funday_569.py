@@ -169,6 +169,7 @@ def sunday_funday_569():
     parser.add_argument("--list", action='store_true', help="print the specified target file if it exists")
 
     parser.add_argument("--filter", type=re.compile, help="Output folder")
+    parser.add_argument("--csv", help="CSV output file for hashes")
 
     parser.add_argument("--algo", default='sha256', help="Output folder")
     parser.add_argument("--recurse", action='store_true', help="Enable recursivity if target is a folder")
@@ -186,6 +187,14 @@ def sunday_funday_569():
     try:
         # Instanciate the processing class
         extractor = Extractor(extract_folder = args.extract, process_hash = args.hash, process_list = args.list, hash_algo=args.algo)
+        try:
+            csv_out = None
+            if args.csv:
+                csv_out = open(args.csv, 'wb')
+                csv_out.write('Filename|Hash({})\n'.format(args.algo))
+        except Exception as e:
+            logging.error('Cannot create CSV file: {} [{}]'.format(args.csv, e))
+
 
         # dfvfs mediator for handling shadow // using interactive command line
         mediator = command_line.CLIVolumeScannerMediator()
@@ -217,9 +226,15 @@ def sunday_funday_569():
             # Process
             for filename, filehash in extractor.process(file_entry, prefix=prefix, recurse=args.recurse, ads=args.noads, filter=args.filter):
                 logging.info('   - {}: {}'.format(filename, filehash))
+                if csv_out:
+                    csv_out.write('{}|{}\n'.format(filename, filehash))
     except Exception as e:
         logging.error(e)
         raise e
+
+    finally:
+        if csv_out:
+            csv_out.close()
 
 
 if __name__ == '__main__':
