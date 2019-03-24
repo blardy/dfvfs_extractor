@@ -5,3 +5,4 @@ libvhdi-python
 libvmdk-python
 libfsapfs-python
 libvshadow-python
+pytsk3
