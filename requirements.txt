@@ -6,3 +6,5 @@ libvmdk-python
 libfsapfs-python
 libvshadow-python
 pytsk3
+dtfabric
+pyyaml
